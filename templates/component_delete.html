@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}Elimina componente{% endblock %}
+{% block content %}
+<h1>Elimina {{ component['code'] }}</h1>
+<section class="panel"><p>L’eliminazione è definitiva ed è permessa solo dopo l’archiviazione, con giacenza zero, senza movimenti e senza righe nel modulo riordino. Il codice resta riservato e le vecchie etichette non saranno assegnate ad altri componenti.</p><p>Se esiste uno storico, conservare il componente archiviato.</p>
+<form method="post"><input type="hidden" name="csrf_token" value="{{ csrf_token }}"><label>Digita {{ component['code'] }} per confermare<input name="confirm_code" required autocomplete="off"></label><button type="submit">Elimina definitivamente</button> <a href="{{ url_for('component_detail', component_id=component['id']) }}">Annulla</a></form></section>
+{% endblock %}

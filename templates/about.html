@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+{% block title %}Informazioni / Crediti{% endblock %}
+{% block content %}
+<h1>Informazioni / Crediti</h1>
+<section class="panel"><h2>Magazzino Elettronica — IIS Stanislao Cannizzaro, Colleferro</h2><p>Versione {{ app_version }}</p><p><strong>Ideazione e sviluppo originale: Nikita Spiridigliozzi</strong></p><p>© 2026 Nikita Spiridigliozzi, limitatamente ai contributi originali di cui detiene i diritti.</p><p>Base gestionale v1.4.0: nikitaspy/progetto-pontecorvo, commit 0a5d29518368062f6f2ffc430d5ddecc1208a3db.</p><p>GNU Affero General Public License v3.0 (AGPL-3.0), con termini aggiuntivi di attribuzione ai sensi della sezione 7(b), ove validamente applicabili. Il nome dell’istituto identifica il contesto del progetto senza implicare approvazione ufficiale.</p><p><a href="{{ url_for('legal_document', name='LICENSE') }}">Licenza integrale</a> · <a href="{{ url_for('legal_document', name='NOTICE.md') }}">Avviso di attribuzione</a> · <a href="{{ url_for('legal_document', name='ADDITIONAL_TERMS.md') }}">Termini aggiuntivi</a> · <a href="https://github.com/nikitaspy/magazzino-cannizzaro">Codice sorgente</a></p><h3>Dipendenze</h3><p>Flask e Werkzeug (BSD-3-Clause), openpyxl (MIT), ReportLab (BSD), qrcode (BSD), Waitress (ZPL-2.1). Restano applicabili le rispettive licenze distribuite con i pacchetti.</p></section>
+{% endblock %}
